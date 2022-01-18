@@ -1,0 +1,127 @@
+// ASU Brand Standard Colors
+// Reference: https://hub.asu.edu/brand-hq/brand-standards/color-palette
+// Reference: bootstrap4-theme/src/scss/variables/_colors.scss
+
+// Overrides for default semantic color names in $theme-colors that we want to keep using.
+// We'll remove the following terms from $theme-colors later: primary, secondary, light, dark,
+$success: $uds-color-alerts-success;
+$info: $uds-color-alerts-info;
+$warning: $uds-color-alerts-warning;
+$danger: $uds-color-alerts-error;
+
+// Assigning null to the entirety of the default color maps that are included in BS5.
+$blue-100: null;
+$blue-200: null;
+$blue-300: null;
+$blue-400: null;
+$blue-500: null;
+$blue-600: null;
+$blue-700: null;
+$blue-800: null;
+$blue-900: null;
+
+$indigo-100: null;
+$indigo-200: null;
+$indigo-300: null;
+$indigo-400: null;
+$indigo-500: null;
+$indigo-600: null;
+$indigo-700: null;
+$indigo-800: null;
+$indigo-900: null;
+
+$purple-100: null;
+$purple-200: null;
+$purple-300: null;
+$purple-400: null;
+$purple-500: null;
+$purple-600: null;
+$purple-700: null;
+$purple-800: null;
+$purple-900: null;
+
+$pink-100: null;
+$pink-200: null;
+$pink-300: null;
+$pink-400: null;
+$pink-500: null;
+$pink-600: null;
+$pink-700: null;
+$pink-800: null;
+$pink-900: null;
+
+$red-100: null;
+$red-200: null;
+$red-300: null;
+$red-400: null;
+$red-500: null;
+$red-600: null;
+$red-700: null;
+$red-800: null;
+$red-900: null;
+
+$orange-100: null;
+$orange-200: null;
+$orange-300: null;
+$orange-400: null;
+$orange-500: null;
+$orange-600: null;
+$orange-700: null;
+$orange-800: null;
+$orange-900: null;
+
+$yellow-100: null;
+$yellow-200: null;
+$yellow-300: null;
+$yellow-400: null;
+$yellow-500: null;
+$yellow-600: null;
+$yellow-700: null;
+$yellow-800: null;
+$yellow-900: null;
+
+$green-100: null;
+$green-200: null;
+$green-300: null;
+$green-400: null;
+$green-500: null;
+$green-600: null;
+$green-700: null;
+$green-800: null;
+$green-900: null;
+
+$teal-100: null;
+$teal-200: null;
+$teal-300: null;
+$teal-400: null;
+$teal-500: null;
+$teal-600: null;
+$teal-700: null;
+$teal-800: null;
+$teal-900: null;
+
+$cyan-100: null;
+$cyan-200: null;
+$cyan-300: null;
+$cyan-400: null;
+$cyan-500: null;
+$cyan-600: null;
+$cyan-700: null;
+$cyan-800: null;
+$cyan-900: null;
+
+$blue:();
+$indigo:();
+$purple:();
+$pink:();
+$red:();
+$yellow:();
+$orange:();
+$green:();
+$teal:();
+$cyan:();
+
+:focus {
+  outline: 0;
+  box-shadow: 0 0 8px #00baff !important;
+}

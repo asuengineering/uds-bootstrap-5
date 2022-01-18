@@ -1,0 +1,60 @@
+// Removal of terms from one of the default Bootstrap mapss has to happen after the map has been defined.
+// Reset default $grays map. Add ASU gray colors into the map.
+$asu-grays: (
+    '1': $uds-color-gray-1,
+    '2': $uds-color-gray-2,
+    '3': $uds-color-gray-3,
+    '4': $uds-color-gray-4,
+    '5': $uds-color-gray-5,
+    '6': $uds-color-gray-6,
+    '7': $uds-color-gray-7,
+);
+$grays: map-merge($asu-grays, $grays);
+$grays: map-remove($grays, '100', '200', '300', '400', '500', '600', '700', '800', '900');
+
+
+// Remove all default Bootstrap 5 colors. Add back color values from ASU UDS system.
+$colors: map-remove( $colors, 'indigo', 'pink', 'red', 'yellow', 'cyan', 'gray', 'gray-dark', 'purple', 'blue', 'teal');
+$asu-colors: (
+    'gold': $uds-color-gold,
+    'maroon': $uds-color-maroon,
+    'blue': $uds-color-blue,
+    'green': $uds-color-green,
+    'orange': $uds-color-orange,
+    'white': $uds-color-white,
+    'bluefocus': $uds-color-bluefocus,
+    'darkgold': $uds-color-darkgold,
+    'darkmaroon': $uds-color-darkmaroon,
+);
+$colors: map-merge($asu-colors, $colors);
+
+// Remove options from $theme-colors that don't make sense in our color system.
+$theme-colors: map-remove($theme-colors, 'primary', 'secondary', 'light', 'dark');
+
+// Redefine alert colors and remerge the results back into the original map. 
+$asu-theme-colors: (
+    'success': $uds-color-alerts-success,
+    'info': $uds-color-alerts-info,
+    'warning': $uds-color-alerts-warning,
+    'danger': $uds-color-alerts-error,
+    'black': $uds-color-gray-7,
+    'white': $uds-color-white,
+    'gray-1': $uds-color-gray-1,
+    'gray-2': $uds-color-gray-2,
+    'gold': $uds-color-gold,
+);
+$theme-colors: map-merge($theme-colors, $asu-theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+// Redefine $utilities-colors map with additional colors from UDS spectrum.
+// Reprocess maps for text and bg colors. Example text-gold or bg-gray-2
+$utilities-colors: map-merge($theme-colors-rgb, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+// Removing gray-1, gray-2 from text color array. 
+// Leaving text-gold as a handy way to alter the link color on a dark background.
+$utilities-text-colors: map-remove($utilities-text-colors, 'gray-1', 'gray-2');
+
+// Removing gold from background color array. 
+$utilities-bg-colors: map-remove($utilities-bg-colors, 'gold');

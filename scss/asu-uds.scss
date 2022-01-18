@@ -1,0 +1,92 @@
+/* ========================================================================
+ * ASU Web Standards: Bootstrap 5 implementation
+ * ========================================================================
+ * Copyright 2022 ASU, Steve Ryan (ASU Engineering)
+ * ======================================================================== */
+
+/* ------------------------------------------------------------------------ 
+ * 1. Load UDS variables
+ * 2. Define image assets path
+ * 3. Define default Bootstrap 5 variable overrides.
+ * 4. Load required Bootstrap SASS partials.
+ * 5. Load any additional Bootstrap SASS partials deemed necessary.
+ * 6. Include custom elements.
+ * 7. Dance, dance, dance.
+ * ------------------------------------------------------------------------ */
+
+// Load UDS SASS variables, which may eventually be abstracted to design tokens.
+/* ------------------------------------------------------------------------ */
+@import 'design-tokens/variables';
+
+
+// Default path for image assets.
+/* ------------------------------------------------------------------------ */
+$image-assets-path: '/img' !default;
+
+
+// Bootstrap functions SASS partial allows for manipulation of colors, calc values, etc.
+/* ------------------------------------------------------------------------ */
+@import 'bootstrap/scss/functions';
+
+
+// Bootstrap 5 default variable overrides.
+/* ------------------------------------------------------------------------ */
+// @import 'overrides/colors';
+@import 'overrides/components';
+
+
+// Remainder of Bootstrap partials that are required
+/* ------------------------------------------------------------------------ */
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+
+// Maniuplate color maps from default variables settings. Map remove, etc.
+/* ------------------------------------------------------------------------ */
+@import 'overrides/color-maps';
+
+
+// Bootstrap partials that are optional
+/* ------------------------------------------------------------------------ */
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar'; // Requires nav
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/modal'; // Requires transitions
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+@import 'bootstrap/scss/spinners';
+@import 'bootstrap/scss/offcanvas'; // Requires transitions
+@import 'bootstrap/scss/placeholders';
+
+
+// Helpers
+/* ------------------------------------------------------------------------ */
+@import "bootstrap/scss/helpers";
+
+// Utilities
+/* ------------------------------------------------------------------------ */
+@import "bootstrap/scss/utilities/api";
+
